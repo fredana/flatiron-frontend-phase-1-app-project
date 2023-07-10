@@ -9,6 +9,37 @@
     <script defer src="main.js"></script>
 </head>
 <body>
-    <h1>test</h1>
+    <div id="welcome1">
+        <h1 id="welcome">WELCOME TO FREDANA RESORT</h1>
+    </div>
+     
+      <div id="bookSection">   
+         <form id="fill" action="#" method="POST">
+             <h1 class="booking">BOOK A ROOM</h1>
+             <input id="fname" type="text" placeholder="Full Name" required><br><br>
+             <input id="email" type="email" placeholder="Email" required><br><br>
+             <input type="number" name="" id="adult" placeholder="Adult" required><br><br>
+             <input type="number" name="" id="child" placeholder="Children" required><br><br>
+             <input type="text" list="choose" name="" id="typeRoom" placeholder="Choose a Room" required><br><br>
+                 <datalist name="room" id="choose">
+                     <option value="Studio"></option>
+                     <option value="One BedR"></option>
+                     <option value="Two BedR"></option>
+                     <option value="Three BedR"></option>
+                 </datalist>
+             <label for="date">Check-In</label>
+             <input type="date" name="" id="comeIn" required><br><br>
+             <label for="date">Check-Out</label>
+             <input type="date" name="" id="goOut" required><br><br>
+             <input id="submit" type="submit" value="Submit">
+             <input id="reset" type="reset" value="Reset" >
+         </form> 
+
+         <div id="h3">
+            <!-- <h3 class="confirm">BOOKING CONFIRMATION</h3> -->
+            </div>
+        <div id="confirmation">    
+        </div>
+        </div>
 </body>
 </html>
