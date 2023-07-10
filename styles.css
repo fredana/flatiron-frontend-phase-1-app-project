@@ -34,6 +34,8 @@ body{
 #welcome1{
     position: relative;
     font-family: cursive;
+    font-size: xx-large;
+    background-color: rgba(141, 197, 244, 0.763);
     
     
 }
