@@ -107,3 +107,31 @@ function submitBtn(){
     btn.addEventListener('mouseleave', alertNotSubmit)
 }
 submitBtn()
+
+//******************   RESET BUTTON IN BOOKING A ROOM SECTION  *******************
+function bgColorReset(brbtn){
+    brbtn.target.style.backgroundColor = 'orange'
+    brbtn.target.style.color ='red'
+    brbtn.target.style.fontWeight ='bold'
+    brbtn.target.style.borderRadius ='10px'
+    brbtn.target.style.fontSize ='25px'
+}
+function alertNoAction(brbtn){
+    brbtn.target.style.backgroundColor = 'white'
+    brbtn.target.style.color ='black'
+    brbtn.target.style.fontWeight ='bold'
+    brbtn.target.style.borderRadius ='1px'
+    brbtn.target.style.fontSize ='15px'
+}
+
+function handleDelete(e){
+    e.target.value.remove(); 
+}
+
+function resetBtn(){
+    let btn = document.querySelector('#reset')
+    btn.addEventListener('mouseover', bgColorReset)
+    btn.addEventListener('mouseleave', alertNoAction)
+    btn.addEventListener('click', handleDelete)
+}
+resetBtn()
