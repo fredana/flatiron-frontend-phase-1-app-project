@@ -65,3 +65,45 @@ function bookingConfirmationBtn(){
     document.querySelector('#confirmation').appendChild(btn)
     document.querySelector('#confirmation').appendChild(resetAllBtn)
 }
+
+function confirmMessage(){
+    const list2 = document.getElementById("confirmation");
+    list2.innerHTML = 'THANKS FOR YOUR BOOKING'
+    list2.style.color = 'green'
+    list2.style.backgroundColor = 'cyan'
+    list2.style.fontSize = '30px'
+    list2.style.fontFamily = 'cursive'
+    list2.style.width = '300px'
+    
+}
+
+function handleDelete2(){
+    const list = document.getElementById("confirmation");
+
+    while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+    }
+}
+
+function bgColorSubmit(bsbtn){
+    bsbtn.target.style.backgroundColor = 'lightgreen'
+    bsbtn.target.style.color ='green'
+    bsbtn.target.style.fontWeight ='bold'
+    bsbtn.target.style.borderRadius ='10px'
+    bsbtn.target.style.fontSize ='25px'
+}
+function alertNotSubmit(bsbtn){
+    bsbtn.target.style.backgroundColor ='white'
+    bsbtn.target.style.color ='black'
+    bsbtn.target.style.fontWeight ='bold'
+    bsbtn.target.style.borderRadius ='1px'
+    bsbtn.target.style.fontSize ='15px'
+}
+
+
+function submitBtn(){
+    let btn = document.querySelector('#submit')
+    btn.addEventListener('mouseover', bgColorSubmit)
+    btn.addEventListener('mouseleave', alertNotSubmit)
+}
+submitBtn()
