@@ -163,3 +163,9 @@ function allMembers(){
     .then(res => res.json())
     .then(family => family.forEach(mem => renderOnePerson(mem)))
 }
+
+//************************************ INITIALIZE ********************************************
+function initialize(){
+    allMembers()
+}
+initialize();
