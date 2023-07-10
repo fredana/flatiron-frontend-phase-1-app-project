@@ -9,3 +9,9 @@
     background-color: rgb(80, 205, 230);
     width: 350px;
 }
+
+body{
+    background-image: url('images/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
