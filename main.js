@@ -156,3 +156,10 @@ function renderOnePerson(mem){
     // console.log(card)
     document.querySelector('#wrapper').appendChild(card)
 }
+
+//************************************* API ***********************************************
+function allMembers(){
+    fetch('http://localhost:3000/reservation')
+    .then(res => res.json())
+    .then(family => family.forEach(mem => renderOnePerson(mem)))
+}
