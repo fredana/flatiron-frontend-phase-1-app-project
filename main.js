@@ -28,3 +28,15 @@ function confirmationHeading(){
     document.querySelector('#h3').appendChild(h3)
 }
 confirmationHeading()
+
+//************************************************  CONFIRMATION TEXT  *********************************
+function confirmBookingText(text){    
+    let p = document.createElement('p')
+    p.textContent = text 
+    p.style.fontWeight='bold'  
+    p.style.fontSize='25px'
+    p.style.backgroundColor = 'lightgray'
+    p.style.lineHeight = '0px'
+    p.style.marginTop = '0px'
+    document.querySelector('#confirmation').appendChild(p)
+}
