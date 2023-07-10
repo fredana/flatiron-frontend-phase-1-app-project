@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         confirmBookingText(`Room Size : ${e.target.typeRoom.value}`)
         confirmBookingText(`Check-in Date : ${e.target.comeIn.value}`)
         confirmBookingText(`Check-out Date : ${e.target.goOut.value}`)
-        confirmationHeading(e.target.value)
+        
         bookingConfirmationBtn(e.target.value)   
         // form.reset();
     })
