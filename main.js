@@ -52,4 +52,16 @@ function bookingConfirmationBtn(){
     btn.addEventListener('mouseover', bgColorSubmit)
     btn.addEventListener('mouseleave', alertNotSubmit)
     btn.addEventListener('click', confirmMessage)
+
+    //********************************** RESET ALL BUTTON *************************************
+    let resetAllBtn = document.createElement('button')
+    resetAllBtn.textContent = 'Reset All'
+    resetAllBtn.style.fontSize = '20px'
+    resetAllBtn.style.borderRadius ='7px'
+    resetAllBtn.addEventListener('mousemove', bgColorReset)
+    resetAllBtn.addEventListener('mouseleave', alertNoAction)
+    resetAllBtn.addEventListener('click', handleDelete2)
+    
+    document.querySelector('#confirmation').appendChild(btn)
+    document.querySelector('#confirmation').appendChild(resetAllBtn)
 }
