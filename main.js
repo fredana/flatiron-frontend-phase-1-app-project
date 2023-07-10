@@ -135,3 +135,24 @@ function resetBtn(){
     btn.addEventListener('click', handleDelete)
 }
 resetBtn()
+
+//********************************* FUNCTION RENDER ***********************************
+function renderOnePerson(mem){
+    let card = document.createElement('li');
+    card.className = 'card';
+    card.innerHTML = `
+        <img src="${mem.imageUrl}">;
+        <div class="content">
+            <h4>${mem.name}</h4>
+            <p>
+                num:<span class="num">${mem.num}</span> in the list
+            </p>
+            <p>
+                age:<span class="age">${mem.age}</span> years old
+            </p>
+            
+        </div>
+    `
+    // console.log(card)
+    document.querySelector('#wrapper').appendChild(card)
+}
