@@ -1,0 +1,11 @@
+.booking, .confirm{
+    text-decoration: underline;
+    margin-top: 1px;
+    color: rgb(249, 252, 252);
+}
+
+#bookSection{
+    margin-left: 30%;
+    background-color: rgb(80, 205, 230);
+    width: 350px;
+}
