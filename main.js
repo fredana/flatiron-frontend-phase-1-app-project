@@ -40,3 +40,16 @@ function confirmBookingText(text){
     p.style.marginTop = '0px'
     document.querySelector('#confirmation').appendChild(p)
 }
+
+//**********************************  CONFIRM & ResetAll SECTION  ***********************************
+function bookingConfirmationBtn(){
+    let btn = document.createElement('button')
+    btn.textContent = 'Confirm'
+    btn.style.color ='green'
+    btn.style.fontWeight ='bold'
+    btn.style.fontSize ='25px'
+    btn.style.borderRadius ='10px'
+    btn.addEventListener('mouseover', bgColorSubmit)
+    btn.addEventListener('mouseleave', alertNotSubmit)
+    btn.addEventListener('click', confirmMessage)
+}
