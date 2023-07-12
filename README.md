@@ -1,13 +1,13 @@
 # flatiron-frontend-phase-1-app-project
 My Flatiron Phase 1 App Project
 
-NAME
+NAME: 
 Booking A Room App
 
-DESCRIPTION
+DESCRIPTION:
 This app can be used to book a room in a hotel or guesthouse with information about the guest's details and checking / checkout dates; also send them a reservation confirmation.
 
-INSTALLATION INSTRUCTION
+INSTALLATION INSTRUCTION: 
 Global setup:
   Download and install Git
   git config --global user.email EMAIL_ADDRESS
