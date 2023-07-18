@@ -85,12 +85,12 @@ function confirmBookingText(text){
 
 function confirmMessage(){
     const list2 = document.getElementById("fill");
-    list2.innerHTML = 'THANKS FOR CONFIRMING YOUR BOOKING'
+    list2.innerHTML = 'THANKS FOR BOOKING WITH US TODAY!. A CONFIRMATION EMAIL HAS BEEN SENT TO YOU.'
     list2.style.color = 'green'
     list2.style.backgroundColor = 'cyan'
     list2.style.fontSize = '30px'
     list2.style.fontFamily = 'cursive'
-    list2.style.width = '300px'
+    list2.style.width = '500px'
 }
 
 //-----  CONFIRM & EDIT BUTTONS  ----
