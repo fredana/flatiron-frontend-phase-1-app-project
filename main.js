@@ -68,6 +68,12 @@ document.querySelector('#fill').addEventListener('submit', handleSubmit)
         .then(guest => console.log(guest))
     }
 
+//INITIAL RENDER
+function initialize(){
+    getAllGuests()
+}
+// initialize()
+
 
     //****   SUBMIT & RESET BUTTON IN BOOKING A ROOM SECTION  ******
 
