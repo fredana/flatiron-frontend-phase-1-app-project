@@ -1,17 +1,73 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let form = document.querySelector('form')
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        confirmBookingText(`Name: ${e.target.fname.value}`);
-        confirmBookingText(`Guest(s) : ${e.target.adult.value} adult(s)`)
-        confirmBookingText(`And : ${e.target.child.value} kid(s)`)
-        confirmBookingText(`Room Size : ${e.target.typeRoom.value}`)
-        confirmBookingText(`Check-in Date : ${e.target.comeIn.value}`)
-        confirmBookingText(`Check-out Date : ${e.target.goOut.value}`)
-        bookingConfirmationBtn(e.target.value)   
-        // form.reset();
-    })
-})
+document.querySelector('#fill').addEventListener('submit', handleSubmit)
+
+    function handleSubmit(e){
+        e.preventDefault()
+        let guestObj = {
+            fname: e.target.fname.value,
+            contact: e.target.contact.value,
+            adult: e.target.adult.value,
+            child : e.target.child.value,
+            typeRoom : e.target.typeRoom.value,
+            comeIn : e.target.comeIn.value,
+            goOut : e.target.goOut.value
+        }
+        renderOneGuest(guestObj)
+        confirmGuest(guestObj)
+        bookingConfirmationBtn()
+    }
+
+    //DOM RENDER FUNCTIONS
+    function renderOneGuest(guest){
+        let card = document.createElement('li')
+        card.className = 'card'
+        card.innerHTML = `
+            <div class="content">
+            <h4>${guest.fname}</h4>
+            <p>
+                Contact: <span class="room">${guest.contact}</span> 
+            </p>
+            <p>
+               <span class="room">${guest.adult}</span> Adult(s)
+            </p>
+            <p>
+                <span class="room">${guest.child}</span> Kid(s)
+            </p>
+            <p>
+                Prefered Room: <span class="room">${guest.typeRoom}</span> 
+            </p>
+            <p>
+                Checking In: <span class="enter">${guest.comeIn}</span>
+            </p>
+            <p>
+                Checking Out: <span class="exit">${guest.goOut}</span> 
+            </p>
+        </div>
+        `
+
+    //ADD GUEST CARD TO DOM
+    document.querySelector('#bookingList').appendChild(card)
+    }
+
+    //FETCH REQUESTS
+
+    function getAllGuests(){
+        fetch('http://localhost:3000/guestData')
+        .then(res => res.json())
+        .then(guestData => guestData.forEach(guest => renderOneGuest(guest)))
+    }
+
+    function confirmGuest(guestObj){
+        fetch('http://localhost:3000/guestData',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(guestObj)
+        })
+        .then(res => res.json())
+        .then(guest => console.log(guest))
+    }
+
 
     //****   SUBMIT & RESET BUTTON IN BOOKING A ROOM SECTION  ******
 
