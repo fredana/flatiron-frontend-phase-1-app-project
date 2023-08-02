@@ -141,7 +141,7 @@ function confirmBookingText(text){
 }
 
 function confirmMessage(){
-    const list2 = document.getElementById("fill");
+    const list2 = document.getElementById("bookingList");
     list2.innerHTML = 'THANKS FOR BOOKING WITH US TODAY!. A CONFIRMATION EMAIL HAS BEEN SENT TO YOU.'
     list2.style.color = 'green'
     list2.style.backgroundColor = 'cyan'
@@ -163,7 +163,7 @@ function bookingConfirmationBtn(){
     btn.addEventListener('mouseover', bgColorSubmit)
     btn.addEventListener('mouseleave', alertNotSubmit)
     btn.addEventListener('click', confirmMessage)
-    btn.addEventListener('click', handleDelete2)
+    
 
     //.... EDIT BUTTON ....
     let resetAllBtn = document.createElement('button')
@@ -172,20 +172,11 @@ function bookingConfirmationBtn(){
     resetAllBtn.style.borderRadius ='7px'
     resetAllBtn.addEventListener('mousemove', addBgColorResetBtn)
     resetAllBtn.addEventListener('mouseleave', cancelBgColorResetBtn)
-    resetAllBtn.addEventListener('click', handleDelete2)
     resetAllBtn.addEventListener('click', handleDelete)
     
     //... DISPLAY BOTH BUTTONS ...
-    document.querySelector('#confirmation').appendChild(btn)
-    document.querySelector('#confirmation').appendChild(resetAllBtn)
+    document.querySelector('#bookingList').appendChild(btn)
+    document.querySelector('#bookingList').appendChild(resetAllBtn)
 }
 
-//..... Delete Booking Text .....
-function handleDelete2(){
-    const list = document.getElementById("confirmation");
-
-    while (list.hasChildNodes()) {
-        list.removeChild(list.firstChild);
-    }
-}
 
