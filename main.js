@@ -113,8 +113,9 @@ submitBtn()
     }
     
         //... RESET BOOKING VALUES ...
-    function handleDelete(e){
-        e.target.value.remove(); 
+    function handleDelete(){
+        let editValue = document.getElementById('bookingList')
+        editValue.innerHTML = ''
     }
     
         //... BOOKING RESET BUTTON ...
